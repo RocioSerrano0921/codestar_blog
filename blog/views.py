@@ -7,5 +7,5 @@ from .models import Post  # Import the Post model
 class PostList(generic.ListView):
     model = Post # Specify the model to use
     queryset = Post.objects.all() # Retrieve all Post objects
-    template_name = "post_list.html"  # Specify the template to render
-    
+    template_name = "blog/index.html"
+    paginate_by = 6
