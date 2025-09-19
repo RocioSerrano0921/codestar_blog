@@ -5,4 +5,5 @@ blog/fixtures/
 .vscode/
 .env
 venv/
+*.pyc
 __pycache__/
