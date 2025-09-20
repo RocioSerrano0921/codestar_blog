@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Post, Comment
-from django_summernote.admin import SummernoteModelAdmin # import class SummernoteModelAdmin, that defines 
+from django_summernote.admin import SummernoteModelAdmin  # import class SummernoteModelAdmin, that defines 
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):  # instead of ModelAdmin

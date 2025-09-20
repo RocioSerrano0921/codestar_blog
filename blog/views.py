@@ -24,11 +24,11 @@ def post_detail(request, slug):
     :template:`blog/post_detail.html`
     """
 
-    queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
+    queryset = Post.objects.filter(status=1)  # Only get posts with status=1 (published)
+    post = get_object_or_404(queryset, slug=slug)  # Get the post with the given slug or return 404 if not found
 
     return render(
         request,
         "blog/post_detail.html",
-        {"post": post},
+        {"post": post},  # Pass the post to the template context
     )
